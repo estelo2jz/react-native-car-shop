@@ -22,12 +22,12 @@ const Avatars = ({ avatars }) => {
 
 const styles = StyleSheet.create({
   avatarStyle: {
-    // resizeMode: 'cover',
-    // width: theme.imageHeight.xs,
-    // height: theme.imageHeight.xs,
-    // borderRadius: theme.imageHeight.xs / 2,
-    // borderWidth: theme.borderRadius.xs,
-    // borderColor: theme.colors.white,
+    resizeMode: 'cover',
+    width: theme.imageHeight.xs,
+    height: theme.imageHeight.xs,
+    borderRadius: theme.imageHeight.xs / 2,
+    borderWidth: theme.borderRadius.xs,
+    borderColor: theme.colors.white,
   }
 })
 
