@@ -4,12 +4,13 @@ import theme from '../assets/themes/index';
 import cars from '../assets/data/cars';
 import Card from './Card';
 import Separator from './Separator.js';
+// import BottomSheet from 'reanimated-bottom-sheet';
+
 
 const ProductScreen = ({ navigation, navigation: { setOptions } }) => {
   return (
     <View style={styles.container}>
-      <Text>Product Screen</Text>
-
+      {/* <Text>Product Screen</Text> */}
       <ScrollView>
         <View style={styles.albumContainer}>
           {cars.map((item, index) =>
@@ -23,7 +24,13 @@ const ProductScreen = ({ navigation, navigation: { setOptions } }) => {
           )}
         </View>
       </ScrollView>
-
+      {/* <BottomSheet
+        ref={sheetRef}
+        snapPoints={[250, 0]}
+        initialSnap={1}
+        borderRadius={10}
+        renderContent={renderBottomSheetContent}
+      /> */}
       {/* <Button
         title="Click Here"
         onPress={() => alert('Button Clicked!')}
@@ -34,10 +41,18 @@ const ProductScreen = ({ navigation, navigation: { setOptions } }) => {
 
 export default ProductScreen;
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+  albumContainer: {
+    marginBottom: theme.spacing.l,
   },
-});
+  openSheetButton: {
+    width: 32,
+    height: 32,
+    backgroundColor: theme.colors.primary,
+    marginRight: theme.spacing.m,
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+})
